@@ -21,3 +21,4 @@ Python >= 3.8.0 (推荐3.10.0版本) nodejs >= 14.0 (推荐最新) Mysql >= 8.0
 python manage.py migrate book zero   
 python manage.py makemigrations
 python manage.py migrate
+11
