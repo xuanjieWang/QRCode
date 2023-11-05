@@ -78,37 +78,47 @@ export const crudOptions = (vm) => {
       title: 'ID',
       key: 'id',
       show: false,
-      disabled: true,
       width: 90,
       form: {
+        disabled: true
+      },
+      view: { // 查看对话框组件的单独配置
         disabled: true
       }
     },
     {
       title: '账号',
       key: 'username',
-      sortable: true,
-      treeNode: true
+      treeNode: true,
+            view: { // 查看对话框组件的单独配置
+        disabled: true
+      }
     },
     {
       title: '用户名称',
       key: 'user',
-      sortable: true,
-      treeNode: true
+      treeNode: true,
+      view: { // 查看对话框组件的单独配置
+        disabled: true
+      }
     },
     {
       title: '文件名',
       key: 'path',
-      sortable: true,
-      width: 250
+      width: 250,
+      view: { // 查看对话框组件的单独配置
+        disabled: true
+      }
     },
     {
       title: '二维码内容',
       key: 'text',
-      sortable: true
+            view: { // 查看对话框组件的单独配置
+        disabled: true
+      }
     },
     {
-      title: '图片',
+      title: '二维码',
       key: 'path',
       width: 150,
       component: {
@@ -119,16 +129,44 @@ export const crudOptions = (vm) => {
           return h('img', {
             attrs: {
               src: 'http://localhost:8000/media/' + params.value,
-              alt: '图片'
+              alt: '二维码'
             },
             style: {
               width: '100%',
               height: 'auto'
             }
           })
-        }
+        },
+      },
+       view: { // 查看对话框组件的单独配置
+        disabled: false,
+        component: {
+        props: {
+          row: Object // 行数据对象
+        },
+        render: (h, params) => {
+          return h('img', {
+            attrs: {
+              src: 'http://localhost:8000/media/' + params.value,
+              alt: ''
+            },
+            style: {
+              width: '200px',
+              height: 'auto'
+            }
+          })
+        },
+      },
       }
-    }
-    ].concat(vm.commonEndColumns())
+    },
+    {
+      title: '创建时间',
+      key: 'create_datetime',
+      sortable: true,
+      view: { // 查看对话框组件的单独配置
+        disabled: true
+      }
+    },
+  ]
   }
 }

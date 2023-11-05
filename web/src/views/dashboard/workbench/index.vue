@@ -4,7 +4,7 @@
       <div class="set-btn-class" slot="callbackButton">
         <el-button v-if="customizing" type="primary" icon="el-icon-check" round @click="save">完成&nbsp;&nbsp;
         </el-button>
-        <el-button v-else type="primary" icon="el-icon-edit" round @click="custom">自定义</el-button>
+        <!-- <el-button v-else type="primary" icon="el-icon-edit" round @click="custom">自定义</el-button> -->
         <el-button v-if="minimize" type="warning" icon="el-icon-plus" round @click="clickMinimize">展开&nbsp;&nbsp;
         </el-button>
       </div>

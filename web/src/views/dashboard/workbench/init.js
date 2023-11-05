@@ -117,114 +117,114 @@ const log = [
     element: 'registeredUser',
     moved: false
   },
-  {
-    i: 'dashboardImg8',
-    x: 14,
-    y: 58,
-    w: 16,
-    h: 14,
-    config: {
-      src: {
-        label: '图片地址',
-        type: 'input',
-        value: 'https://kfm-waiter.oss-cn-zhangjiakou.aliyuncs.com/dvadmin/img/chajianshichang.jpg',
-        placeholder: '请输入图片地址',
-        rules: [
-          {
-            required: true,
-            message: '不能为空'
-          }
-        ]
-      },
-      url: {
-        label: '跳转地址',
-        type: 'input',
-        placeholder: '请输入跳转地址',
-        value: 'https://bbs.django-vue-admin.com/plugMarket.html',
-        rules: [
-          {
-            required: true,
-            message: '不能为空'
-          }
-        ]
-      }
-    },
-    isResizable: true,
-    element: 'dashboardImg',
-    moved: false
-  },
-  {
-    i: 'dashboardImg9',
-    x: 0,
-    y: 58,
-    w: 14,
-    h: 14,
-    config: {
-      src: {
-        label: '图片地址',
-        type: 'input',
-        value: '/image/card/tencent.jpg',
-        placeholder: '请输入图片地址',
-        rules: [
-          {
-            required: true,
-            message: '不能为空'
-          }
-        ]
-      },
-      url: {
-        label: '跳转地址',
-        type: 'input',
-        placeholder: '请输入跳转地址',
-        value: 'https://cloud.tencent.com/act/cps/redirect?redirect=1060&cps_key=b302a514a6688aa30823fac954464e5d&from=console',
-        rules: [
-          {
-            required: true,
-            message: '不能为空'
-          }
-        ]
-      }
-    },
-    isResizable: true,
-    element: 'dashboardImg',
-    moved: false
-  },
-  {
-    i: 'dashboardImg10',
-    x: 30,
-    y: 58,
-    w: 18,
-    h: 14,
-    config: {
-      src: {
-        label: '图片地址',
-        type: 'input',
-        value: 'https://kfm-waiter.oss-cn-zhangjiakou.aliyuncs.com/dvadmin/img/aliyun-02.png',
-        placeholder: '请输入图片地址',
-        rules: [
-          {
-            required: true,
-            message: '不能为空'
-          }
-        ]
-      },
-      url: {
-        label: '跳转地址',
-        type: 'input',
-        placeholder: '请输入跳转地址',
-        value: 'https://www.aliyun.com/minisite/goods?userCode=jpef8a71&share_source=copy_link',
-        rules: [
-          {
-            required: true,
-            message: '不能为空'
-          }
-        ]
-      }
-    },
-    isResizable: true,
-    element: 'dashboardImg',
-    moved: false
-  },
+  // {
+  //   i: 'dashboardImg8',
+  //   x: 14,
+  //   y: 58,
+  //   w: 16,
+  //   h: 14,
+  //   config: {
+  //     src: {
+  //       label: '图片地址',
+  //       type: 'input',
+  //       value: 'https://kfm-waiter.oss-cn-zhangjiakou.aliyuncs.com/dvadmin/img/chajianshichang.jpg',
+  //       placeholder: '请输入图片地址',
+  //       rules: [
+  //         {
+  //           required: true,
+  //           message: '不能为空'
+  //         }
+  //       ]
+  //     },
+  //     url: {
+  //       label: '跳转地址',
+  //       type: 'input',
+  //       placeholder: '请输入跳转地址',
+  //       value: 'https://bbs.django-vue-admin.com/plugMarket.html',
+  //       rules: [
+  //         {
+  //           required: true,
+  //           message: '不能为空'
+  //         }
+  //       ]
+  //     }
+  //   },
+  //   isResizable: true,
+  //   element: 'dashboardImg',
+  //   moved: false
+  // },
+  // {
+  //   i: 'dashboardImg9',
+  //   x: 0,
+  //   y: 58,
+  //   w: 14,
+  //   h: 14,
+  //   config: {
+  //     src: {
+  //       label: '图片地址',
+  //       type: 'input',
+  //       value: '/image/card/tencent.jpg',
+  //       placeholder: '请输入图片地址',
+  //       rules: [
+  //         {
+  //           required: true,
+  //           message: '不能为空'
+  //         }
+  //       ]
+  //     },
+  //     url: {
+  //       label: '跳转地址',
+  //       type: 'input',
+  //       placeholder: '请输入跳转地址',
+  //       value: 'https://cloud.tencent.com/act/cps/redirect?redirect=1060&cps_key=b302a514a6688aa30823fac954464e5d&from=console',
+  //       rules: [
+  //         {
+  //           required: true,
+  //           message: '不能为空'
+  //         }
+  //       ]
+  //     }
+  //   },
+  //   isResizable: true,
+  //   element: 'dashboardImg',
+  //   moved: false
+  // },
+  // {
+  //   i: 'dashboardImg10',
+  //   x: 30,
+  //   y: 58,
+  //   w: 18,
+  //   h: 14,
+  //   config: {
+  //     src: {
+  //       label: '图片地址',
+  //       type: 'input',
+  //       value: 'https://kfm-waiter.oss-cn-zhangjiakou.aliyuncs.com/dvadmin/img/aliyun-02.png',
+  //       placeholder: '请输入图片地址',
+  //       rules: [
+  //         {
+  //           required: true,
+  //           message: '不能为空'
+  //         }
+  //       ]
+  //     },
+  //     url: {
+  //       label: '跳转地址',
+  //       type: 'input',
+  //       placeholder: '请输入跳转地址',
+  //       value: 'https://www.aliyun.com/minisite/goods?userCode=jpef8a71&share_source=copy_link',
+  //       rules: [
+  //         {
+  //           required: true,
+  //           message: '不能为空'
+  //         }
+  //       ]
+  //     }
+  //   },
+  //   isResizable: true,
+  //   element: 'dashboardImg',
+  //   moved: false
+  // },
   {
     i: 'usersActive11',
     x: 0,

@@ -66,7 +66,10 @@ export default {
         formData.append('text', this.form.text)
         formData.append('username', this.info.username)
         formData.append('name', this.info.name)
+        if(this.info.role_info[0] && this.info.role_info[0].key){
         formData.append('root', this.info.role_info[0].key)
+        }
+
 
         api.upload(formData)
           .then(function (response) {
