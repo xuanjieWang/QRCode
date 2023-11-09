@@ -31,7 +31,7 @@ from dvadmin.system.views.login import (
     ApiLogin,
     LogoutView, CustomTokenRefreshView,
 )
-from book.view import bookUpload
+from qr.view import qrUpload
 from dvadmin.system.views.system_config import InitSettingsViewSet
 from dvadmin.utils.swagger import CustomOpenAPISchemaGenerator
 
@@ -82,8 +82,8 @@ urlpatterns = (
             path("api/init/dictionary/", InitDictionaryViewSet.as_view()),
             path("api/init/settings/", InitSettingsViewSet.as_view()),
             path("apiLogin/", ApiLogin.as_view()),
-            path('api/', include('book.urls')),
-            path("api/upload/", bookUpload.as_view()),
+            path('api/', include('qr.urls')),
+            path("api/upload/", qrUpload.as_view()),
 
         ]
         + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

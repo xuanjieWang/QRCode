@@ -1,6 +1,6 @@
 # Create your views here.
 
-from qrCode.models import QrCode
+from qr.models import qr
 from dvadmin.utils.serializers import CustomModelSerializer
 from dvadmin.utils.viewset import CustomModelViewSet
 from rest_framework.views import APIView
@@ -11,38 +11,22 @@ from django.http import HttpResponse
 import qrcode
 
 
-class QrcodeSerializer(CustomModelSerializer):
-    """
-    书籍-序列化器
-    """
-
+class qrSerializer(CustomModelSerializer):
     class Meta:
-        model = QrCode
+        model = qr
         fields = "__all__"
         read_only_fields = ["id"]
 
 
-class QrCodeCreateUpdateSerializer(CustomModelSerializer):
-    """
-    书籍管理 创建/更新时的列化器
-    """
-
+class qrCreateUpdateSerializer(CustomModelSerializer):
     class Meta:
-        model = QrCode
+        model = qr
         fields = '__all__'
 
 
-class QrCodeViewSet(CustomModelViewSet):
-    """
-    书籍管理接口
-    list:查询
-    create:新增
-    update:修改
-    retrieve:单例
-    destroy:删除
-    """
-    queryset = QrCode.objects.all()
-    serializer_class = QrcodeSerializer
+class qrViewSet(CustomModelViewSet):
+    queryset = qr.objects.all()
+    serializer_class = qrSerializer
     extra_filter_backends = []
     permission_classes = []
     search_fields = ['label']
@@ -63,8 +47,8 @@ class QrCodeViewSet(CustomModelViewSet):
 
 # views.py
 
-class QrCodeUpload(APIView):
-    serializer_class = QrcodeSerializer
+class qrUpload(APIView):
+    serializer_class = qrSerializer
     authentication_classes = []
     permission_classes = []
 
@@ -84,15 +68,12 @@ class QrCodeUpload(APIView):
         # 获取用户的权限 root/user
         user_root = form_data.get('root')
         # qrcode根据文本生成二维码
-        img = QrCode.make(text)
-        img.save(file_name)
+        img = qrcode.make(text)
+        img.save("./media" + file_name)
         # 信息入库
-        code = QrCode(username=username, user=name, text=text, path=file_name, userRoot=user_root)
+        code = qr(username=username, user=name, text=text, path=file_name, userRoot=user_root)
         code.save()
         return HttpResponse('上传成功')
-
-
-
 
         # # 设置文件保存路径
         # file_path = os.path.join(settings.MEDIA_ROOT, file_name)
@@ -101,4 +82,3 @@ class QrCodeUpload(APIView):
         # with open(file_path, 'wb') as f:
         #     for chunk in file.chunks():
         #         f.write(chunk)
-

@@ -1,5 +1,5 @@
 import { request } from '@/api/service'
-export const urlPrefix = '/api/book/'
+export const urlPrefix = '/api/qr/'
 
 /**
  * 列表查询

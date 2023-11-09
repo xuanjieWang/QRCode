@@ -4,7 +4,6 @@
 
 export const crudOptions = (vm) => {
   return {
-
     pageOptions: {
       compact: true
     },
@@ -30,7 +29,6 @@ export const crudOptions = (vm) => {
         text: '',
         disabled () {
           return true
-          // return !vm.hasPermissions('Update')
         }
       },
       remove: {
@@ -90,7 +88,7 @@ export const crudOptions = (vm) => {
       title: '账号',
       key: 'username',
       treeNode: true,
-            view: { // 查看对话框组件的单独配置
+      view: { // 查看对话框组件的单独配置
         disabled: true
       }
     },
@@ -113,7 +111,7 @@ export const crudOptions = (vm) => {
     {
       title: '二维码内容',
       key: 'text',
-            view: { // 查看对话框组件的单独配置
+      view: { // 查看对话框组件的单独配置
         disabled: true
       }
     },
@@ -136,27 +134,27 @@ export const crudOptions = (vm) => {
               height: 'auto'
             }
           })
-        },
+        }
       },
-       view: { // 查看对话框组件的单独配置
+      view: { // 查看对话框组件的单独配置
         disabled: false,
         component: {
-        props: {
-          row: Object // 行数据对象
-        },
-        render: (h, params) => {
-          return h('img', {
-            attrs: {
-              src: 'http://localhost:8000/media/' + params.value,
-              alt: ''
-            },
-            style: {
-              width: '200px',
-              height: 'auto'
-            }
-          })
-        },
-      },
+          props: {
+            row: Object // 行数据对象
+          },
+          render: (h, params) => {
+            return h('img', {
+              attrs: {
+                src: 'http://localhost:8000/media/' + params.value,
+                alt: ''
+              },
+              style: {
+                width: '200px',
+                height: 'auto'
+              }
+            })
+          }
+        }
       }
     },
     {
@@ -166,7 +164,7 @@ export const crudOptions = (vm) => {
       view: { // 查看对话框组件的单独配置
         disabled: true
       }
-    },
-  ]
+    }
+    ]
   }
 }

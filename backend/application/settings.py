@@ -59,7 +59,7 @@ INSTALLED_APPS = [
     "drf_yasg",
     "captcha",
     'channels',
-    'book'
+    'qr'
 ]
 
 MIDDLEWARE = [
